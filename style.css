@@ -1,49 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 body {
-    font-family: 'Pacifico', cursive;
-    text-align: center;
-    background-color: #ffe4e1;
-    animation: backgroundAnimation 5s infinite alternate;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 0;
-  }
-h1 {
-    color:#ff69b4
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
-@keyframes backgroundAnimation {
-  from { background-color: #ffe4e1; }
-  to { background-color: #ffc0cb; }
+#form, #video-page {
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
 }
 input {
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 12px;
+  margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 80%;
-  max-width: 300px;
+  border-radius: 10px;
+  width: calc(100% - 24px);
+  outline: none;
+  transition: 0.3s;
+}
+input:focus {
+  border-color: #ff4081;
 }
 button {
-  padding: 10px 20px;
-  background-color: #ff69b4;
+  padding: 12px 30px;
+  background: #ff4081;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: background 0.3s;
+  font-weight: bold;
 }
 button:hover {
-  background-color: #ff1493;
-  transform: scale(1.1);
+  background: #f50057;
 }
-@media (max-width: 600px) {
-    body {
+video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+#video-page {
+  display: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+  #form, #video-page {
       padding: 20px;
-    }
-    input, button {
-      width: 100%;
-    }
   }
+  h1, h2 {
+      font-size: 24px;
+  }
+}

@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mừng ngày 8/3</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 8/3</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<h1>Nhập số thứ tự của bạn</h1>
-<input type="number" id="numberInput" placeholder="Nhập số">
-<button onclick="showImage()">CLICKME</button>
+<div id="form">
+    <h1>Hehehehaw</h1>
+    <p>Nhập tên và số thứ tự của bạn(BẮT BUỘC)</p>
+    <input type="text" id="name" placeholder="Tên của bạn" required>
+    <input type="number" id="number" placeholder="Số thứ tự" required>
+    <button onclick="submitForm()">Gửi</button>
+</div>
+
+<div id="video-page">
+    <h2>💖 Chúc các bạn nữ luôn xinh đẹp nhaa!!!</h2>
+    <video width="600" controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+</div>
 
 <script src="main.js"></script>
 </body>
